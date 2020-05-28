@@ -14,6 +14,7 @@ Usage
 
 .. code:: python
 
+
 	from sportscribe import SportScribe
 
 	ss = SportScribe('API-KEY-HERE')
