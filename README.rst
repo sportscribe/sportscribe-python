@@ -38,6 +38,11 @@ Returns a list of all match previews on the given date (YYYY-MM-DD)
 	getMatchPreviewByDate(date : str)
 
 
+Configuration
+=============
+
+edit config.py to point to the correct endpoint URL
+
 Usage
 =====
 
