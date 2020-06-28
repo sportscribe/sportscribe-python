@@ -1,4 +1,4 @@
-import config, requests, json
+import requests, json
 
 # Class to manage the result
 class SportScribeResult:
@@ -25,19 +25,26 @@ class SportScribeResult:
 class SportScribe:
 
   apikey : str = None
+  endpoint : str = None
 
   def __init__(self,apikey):
     if apikey == None or apikey == '':
-      raise exception
+      raise Exception('No ApiKey')
     else:
       self.apikey = apikey
 
+  def setEndpoint(self,endpoint : str):
+    self.endpoint = endpoint
+
   def __get(self,endpoint : str):
     if not endpoint[0] == '/':
-      raise exception
+
+      raise Exception('invalid endpoint');
+    elif not self.endpoint:
+      raise Exception('endpoint not set');
 
     headers = { 'x-api-key' : self.apikey }
-    api_url = config.ENDPOINT + endpoint
+    api_url = self.endpoint + endpoint
 
 
     res = requests.get(api_url, headers=headers)

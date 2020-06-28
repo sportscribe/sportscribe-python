@@ -3,6 +3,8 @@ sportscribe-python
 
 sportscribe-python -- Python application to access SportScribe data
 
+v1.0.1
+
 Installation
 ============
 
@@ -57,3 +59,8 @@ Usage
 	  print(result.data)
 
 
+ChangeLog
+=========
+
+
+V1.0.1 = added setEndpoint instead of config.py
