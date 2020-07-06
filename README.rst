@@ -63,4 +63,5 @@ ChangeLog
 =========
 
 
+V1.0.2 = added languages support
 V1.0.1 = added setEndpoint instead of config.py

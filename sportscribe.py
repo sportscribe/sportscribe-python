@@ -26,6 +26,7 @@ class SportScribe:
 
   apikey : str = None
   endpoint : str = None
+  language : str = 'en'
 
   def __init__(self,apikey):
     if apikey == None or apikey == '':
@@ -36,6 +37,9 @@ class SportScribe:
   def setEndpoint(self,endpoint : str):
     self.endpoint = endpoint
 
+  def setLanguage(self,language : str):
+    self.language = language
+
   def __get(self,endpoint : str):
     if not endpoint[0] == '/':
 
@@ -44,7 +48,9 @@ class SportScribe:
       raise Exception('endpoint not set');
 
     headers = { 'x-api-key' : self.apikey }
-    api_url = self.endpoint + endpoint
+    api_url = self.endpoint + endpoint + '?lang=' + self.language
+
+
 
 
     res = requests.get(api_url, headers=headers)
