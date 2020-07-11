@@ -3,7 +3,7 @@ sportscribe-python
 
 sportscribe-python -- Python application to access SportScribe data
 
-v1.0.1
+v1.0.2
 
 Installation
 ============
